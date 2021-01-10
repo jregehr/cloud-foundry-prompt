@@ -27,7 +27,6 @@ The plugin works with or without `CF_HOME` set. But seriously, use the `CF_HOME`
 *   Build this into a [homebrew] package for a clean install experience.
 
 
-test item
 
 
 [Pivotal Cloud Foundry / Getting Started with the cf cli]: https://docs.pivotal.io/pivotalcf/2-2/cf-cli/getting-started.html
