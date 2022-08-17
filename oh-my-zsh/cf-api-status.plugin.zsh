@@ -22,7 +22,7 @@ function set_cf_api_status() {
     ___cf_home=$(echo ${CF_HOME} | cut -d "/" -f4)
     if [[ -n "$___cf_home" ]] ; then
         echo -n " $___cf_home"
-        ___cf_config_info=$(<${CF_HOME}.cf/config.json)
+        ___cf_config_info=$(<${CF_HOME}/.cf/config.json)
     else
         echo -n " .cf"
         ___cf_config_info=$(<~/.cf/config.json)

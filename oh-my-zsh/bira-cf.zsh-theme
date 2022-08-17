@@ -13,7 +13,14 @@ local current_time='%W %*'
 local current_dir='%{$terminfo[bold]$fg[blue]%} %~%{$reset_color%}'
 local git_branch='$(git_prompt_info)%{$reset_color%}'
 
-local _cf_api_status='$(set_cf_api_status)'
+
+if type 'set_cf_api_status' | grep -q 'function' ; then
+    echo "exists"
+    local _cf_api_status='$(set_cf_api_status)'
+else
+    echo "doesn't exist"
+    local _cf_api_status=
+fi
 
 #PROMPT="╭─ ${user_host} ${current_dir} ${git_branch}
 #PROMPT="╭─ ${current_time} ${user_host} ${current_dir} ${git_branch}
