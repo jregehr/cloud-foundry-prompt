@@ -15,10 +15,8 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 
 if type 'set_cf_api_status' | grep -q 'function' ; then
-    echo "exists"
     local _cf_api_status='$(set_cf_api_status)'
 else
-    echo "doesn't exist"
     local _cf_api_status=
 fi
 
