@@ -19,7 +19,8 @@ function set_cf_api_status() {
     echo " "
     echo -n "├─ "
     # Figure out if CF_HOME is set, set the location of the config.json file.
-    ___cf_home=$(echo ${CF_HOME} | cut -d "/" -f4)
+    # ___cf_home=$(echo ${CF_HOME} | cut -d "/" -f4)
+    ___cf_home=$(echo ${CF_HOME} | cut -c15-)
     if [[ -n "$___cf_home" ]] ; then
         echo -n " $___cf_home"
         ___cf_config_info=$(<${CF_HOME}/.cf/config.json)
